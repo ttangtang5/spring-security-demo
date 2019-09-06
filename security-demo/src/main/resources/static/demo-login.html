@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo-Login</title>
+</head>
+<body>
+    <h3>登录页面</h3>
+    <form action="/loginHandler" method="post">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>验证码：</td>
+                <td><input type="text" name="validateCode"></td>
+                <td><img src="/validate/image" onclick="this.src = '/validate/image?' + Math.random()"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="remember-me">记住我</td>
+            </tr>
+            <tr><td><input type="submit" value="登录"></td></tr>
+        </table>
+    </form>
+</body>
+</html>

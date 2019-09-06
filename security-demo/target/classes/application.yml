@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: security-demo
+  session:
+    store-type: none
+
+logging:
+  level:
+      web: debug
+      org.springframework.security: debug
+server:
+  port: 8009
+
+tang:
+  security:
+    browser:
+      loginPage: /demo-login.html
+      loginAfterHandlerType: json
+    validateCode:
+      image:
+        width: 100
+        height: 20
+        codeLength: 4
+        expireIn: 120
+        validateUrls: /user
+
